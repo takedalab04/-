@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html ng-app="BeaconProject">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+        <script src="components/loader.js"></script>
+        <link rel="stylesheet" href="components/loader.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/main.js"></script>
+</head>
+
+<ons-navigator var="beaconNavigator">
+<ons-page ng-controller="TopPageCtrl">
+    <ons-toolbar>
+        <div class="center">
+            Beacon Project
+        </div>
+    </ons-toolbar>
+    
+    <ons-list modifier="inset" style="margin: 10px">
+        <ons-list-item class="list-item-container" ng-repeat="beacon in beacons">
+            <ons-row>
+                <ons-col width="70px">
+                    <img ng-src="{{beacon.icon}}" class="top-page-icon" />
+                </ons-col>
+                <ons-col>
+                    <div class="top-page-name">{{beacon.identifier}}</div>
+                    <div class="top-page-name">{{beacon.name}}</div>
+                    <div class="top-page-proximity">{{beacon.proximity}}</div>
+                    <div class="top-page-proximity">{{beacon.rssi}} dBm</div>
+                </ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+</ons-page>
+</ons-navigator>

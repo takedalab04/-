@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html ng-app="BeaconProject">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+        <script src="components/loader.js"></script>
+        <script src="js/main.js"></script>
+        <link rel="stylesheet" href="components/loader.css">
+</head>
+
+<body>
+<!--    <ons-navigator var="beaconNavigator" page="info-page3.html"></ons-navigator>-->
+
+    <ons-navigator var="beaconNavigator">
+    <ons-page ng-controller="TopPageCtrl">     
+        <!--
+        //VRコード
+        <a-scene>
+            //360度画像
+　　　　    <a-sky src="image/sky.jpg"></a-sky>
+　　　　    //オブジェクト画像
+　　　　    <a-image src="image/ant.png" position="0 2 -5" height="5" width="5"></a-image>
+        <a-scene>
+        -->
+        
+<!--<body onLoad="getCurrentPosition();"-->
+
+    
+
+  <!-- ゲーム画面 -->
+        <div data-role="header" data-position="fixed" data-theme="c">
+            <h1>トップページ</h1>
+        </div>
+        <div>
+            <form>
+                <center>
+                <img src="image/samurai1.jpg" width="310" height="410" alt="map"><br/>
+                <input type="button" value="こうりゃくルート" name="start" onclick="location.href='map1.html?bk1'"><br/>
+                <input type="button" value="しゅうへんマップ" onclick="location.href='map2.html?bk1'">    
+                </center>
+              </form>
+        </div>           
+    </div>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical" >
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="起動された画面" />
+</LinearLayout>
+</body>
+</html>
